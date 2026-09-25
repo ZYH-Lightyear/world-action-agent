@@ -63,10 +63,10 @@ The website is adapted from the [Academic Project Page Template](https://github.
 
 ## Demonstration videos
 
-Six curated rollouts prioritize Goal tasks: open a drawer and put cream cheese inside; turn on the stove; place cheese on a rack; place a wine bottle in a bowl; place a bowl on a plate; and place butter in a basket.
+The gallery contains **20 distinct task instructions**, arranged over **five pages with four videos each**: all ten Object tasks, seven selected Goal tasks, and three Spatial tasks. Object coverage includes alphabet soup, BBQ sauce, butter, chocolate pudding, cream cheese, ketchup, milk, orange juice, salad dressing, and tomato sauce. Each caption has only the benchmark category and one task instruction, without a redundant title.
 
-Object and Spatial clips come from the v332 200-episode batch. The drawer and cheese-on-rack Goal placements come from matching v332 Goal batches. Wine-in-bowl comes from the v312 Goal evaluation (task 02, seed 1). Stove activation comes from the separate v312 one-shot skill validation batch. It is not attributed to the v332 200-episode evaluation.
+Goal selection prioritizes clearly visible completion: opening a drawer, opening a drawer and placing cheese inside, turning on the stove, wine in a bowl/on a plate/on the cabinet, and cheese on the rack. Candidates with unclear completion frames were excluded. Butter-in-basket is retained; bowl-on-cabinet is excluded.
 
-Selection considered the environment success receipt, motion sequences sampled throughout each recording, final release/support, and visible disturbance of surrounding objects. The previous v061 showcase clips have been removed. Each clip retains its entire original H.264 stream, with no cuts or speed changes. Posters show the final recorded frame. Native controls support mobile inline and fullscreen playback; media loads on demand without autoplay.
+Native Previous/Next and numbered buttons work with keyboard and touch input. Changing pages pauses playback; videos load on demand with no autoplay. Without JavaScript, all 20 demonstrations remain accessible. Original H.264 video streams are retained without cuts or speed changes, with MP4 faststart and final-frame posters.
 
-`video-sources.json` records source paths, experiment versions, task instructions, seeds, success receipts, and selection notes. These videos are qualitative examples and do not change the paper's main results table.
+Object/Spatial videos come from the v332 200-episode batch. Goal examples use corresponding v332 batches and the v312 Goal evaluation. Stove activation uses the separate v312 one-shot skill validation batch. `video-sources.json` records the exact experiment, episode, instruction, and source for each selection. Environment success receipts and sampled full-sequence/final frames were reviewed, including visible surrounding-object disturbance. The paper's results table is unchanged.
