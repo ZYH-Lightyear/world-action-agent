@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Action Agent: Harnessing VLMs for Robot Manipulation via World Action Rehearsal</title>
+<meta name="description" content="World Action Agent (WAA) lets vision-language models observe, rehearse, and correct robot actions in a visual action workspace.">
+<meta name="citation_title" content="World Action Agent: Harnessing VLMs for Robot Manipulation via World Action Rehearsal">
+<meta name="citation_author" content="Yehang Zhang">
+<meta name="citation_author" content="Haojian Huang">
+<meta name="citation_author" content="Yifan Chang">
+<meta name="citation_author" content="Jianchong Su">
+<meta name="citation_author" content="Bohan Zhou">
+<meta name="citation_author" content="Yingjie Xu">
+<meta name="citation_author" content="Wosong Chen">
+<meta name="citation_author" content="Tianhao Zhou">
+<meta name="citation_author" content="Chenxu Wang">
+<meta name="citation_author" content="Tianyi Zhang">
+<meta name="citation_author" content="Yangkai Wei">
+<meta name="citation_author" content="Wenqian Li">
+<meta name="citation_author" content="Shiyuan Deng">
+<meta name="citation_author" content="Yinchuan Li">
+<meta name="citation_author" content="Ying-Cong Chen">
+<meta name="citation_author" content="Zexi Li">
+
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2609.29964">
+<meta property="og:title" content="World Action Agent"><meta property="og:description" content="World Action Agent (WAA) lets vision-language models observe, rehearse, and correct robot actions in a visual action workspace.">
+<meta property="og:type" content="website"><meta property="og:url" content="https://zyh-lightyear.github.io/world-action-agent/">
+<link rel="canonical" href="https://zyh-lightyear.github.io/world-action-agent/">
+<link rel="icon" href="static/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="static/css/index.css"><script src="static/js/index.js" defer></script>
+</head><body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<main id="main-content">
+<section class="hero"><div class="hero-body container has-text-centered">
+<p class="eyebrow">ROBOT LEARNING · VISION-LANGUAGE MODELS</p>
+<h1 class="publication-title"><span class="project-name">World Action Agent</span><span class="paper-subtitle">Harnessing VLMs for Robot Manipulation<br class="desktop-break"> via World Action Rehearsal</span></h1>
+<div class="publication-authors"><span class="author-block">Yehang Zhang<sup>1,3,*</sup></span><span class="author-block">Haojian Huang<sup>1,3,*</sup></span><span class="author-block">Yifan Chang<sup>3</sup></span><span class="author-block">Jianchong Su<sup>1,3</sup></span><span class="author-block">Bohan Zhou<sup>2,3</sup></span><span class="author-block">Yingjie Xu<sup>1,3</sup></span><span class="author-block">Wosong Chen<sup>1,3</sup></span><span class="author-block">Tianhao Zhou<sup>1,3</sup></span><span class="author-block">Chenxu Wang<sup>3</sup></span><span class="author-block">Tianyi Zhang<sup>3</sup></span><span class="author-block">Yangkai Wei<sup>3</sup></span><span class="author-block">Wenqian Li<sup>2,3</sup></span><span class="author-block">Shiyuan Deng<sup>3</sup></span><span class="author-block">Yinchuan Li<sup>3</sup></span><span class="author-block">Ying-Cong Chen<sup>1,✉</sup></span><span class="author-block">Zexi Li<sup>2,3,†</sup></span></div>
+<div class="affiliations"><span><sup>1</sup> HKUST(GZ)</span><span><sup>2</sup> CUHK</span><span><sup>3</sup> Knowin AI</span></div>
+<p class="author-notes"><span>* Equal contribution</span><span>† Project leader</span><span>✉ Corresponding author</span></p>
+<div class="publication-links"><a class="button primary" href="https://arxiv.org/pdf/2609.29964" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a><a class="button" href="https://arxiv.org/abs/2609.29964" target="_blank" rel="noopener">arXiv <span aria-hidden="true">↗</span></a><a class="button code-link" href="#code">Code <span class="badge">Coming soon</span></a></div>
+<p class="hero-summary">Observe, rehearse, and correct robot actions in one visual workspace.</p>
+<figure class="teaser"><a href="static/images/teaser.png" target="_blank" rel="noopener" aria-label="View the WAA overview at full resolution"><img src="static/images/teaser.png" alt="WAA connects an interactive visual workspace, action rehearsal, diverse manipulation tasks, and learning from expert videos and human teaching." width="2200" height="1239" fetchpriority="high"></a><figcaption>General-purpose VLMs pilot robots through visual action rehearsal and reusable multimodal skills.</figcaption></figure>
+</div></section>
+<section class="section abstract-section" id="abstract"><div class="container reading-width"><h2>Abstract</h2>
+<p>General-purpose vision-language models bring broad knowledge and spatial reasoning to robot manipulation, yet existing systems either use them indirectly or give them a view of the scene rather than a world in which to act. We present <strong>World Action Agent (WAA)</strong>, a multi-agent harness through which VLMs pilot robots with basic tools, making every decision within a <strong>visual action workspace</strong>.</p>
+<p>Contact views expose local interaction geometry. Action rehearsal lets agents preview and revise proposals before execution. In-view correction closes the loop between observation and action. Through the same workspace, WAA evolves multimodal skills from expert videos and human teaching, and distills interaction traces into smaller VLM pilots.</p>
+<p>With skills learned only from LIBERO-90, WAA achieves <strong>75.6% average success on LIBERO-Pro</strong>, and transfers the same skills to robosuite without further learning. Fine-tuning Qwen3.5-9B on harness traces raises its out-of-domain success from 1.7% to 43.3%.</p>
+</div></section>
+<section class="section" id="method"><div class="container"><div class="section-heading"><div><p class="eyebrow">THE APPROACH</p><h2>A workspace for acting in the world</h2></div><a class="figure-link" href="static/images/method.png" target="_blank" rel="noopener">View full figure ↗</a></div>
+<figure><img src="static/images/method.png" width="2400" height="1605" alt="Method overview: the main agent uses global and Contact views, an Imagination Agent rehearses proposals, a Skill Agent retrieves experience, and reviewed demonstrations and interaction traces support skill evolution and pilot training." loading="lazy"><figcaption><strong>World Action Agent.</strong> The main agent observes, rehearses, and acts in a shared visual workspace. Expert demonstrations and human teaching build a reviewed skill library; interaction traces train smaller VLM pilots.</figcaption></figure>
+<div class="method-points"><div><span class="step">01</span><h3>See the interaction</h3><p>Automatically selected Contact views reveal local relations between the gripper, object, and target.</p></div><div><span class="step">02</span><h3>Rehearse before acting</h3><p>Preview and revise an action with visual and planning feedback before committing to physical motion.</p></div><div><span class="step">03</span><h3>Correct in the view</h3><p>Resolve residual offsets directly in the calibrated view where the agent observes them.</p></div></div>
+</div></section>
+<section class="section cases-section" id="examples"><div class="container"><div class="section-heading"><div><p class="eyebrow">IN ACTION</p><h2>Successful manipulation cases</h2></div><a class="figure-link" href="static/images/cases.png" target="_blank" rel="noopener">View full figure ↗</a></div>
+<div class="cases-layout"><figure><img src="static/images/cases.png" width="1976" height="2000" alt="Three successful WAA sequences: drag-guided bowl placement, an infeasible action revised into an executable one, and a soup-can lift after refining grasp contact." loading="lazy"></figure><div class="case-notes"><article><span class="case-letter">A</span><h3>Drag-guided placement</h3><p>Align the bowl with its target, lower the gripper, and release the bowl onto the plate.</p></article><article><span class="case-letter">B</span><h3>Rehearse and revise</h3><p>Raise an initially infeasible proposal until planning succeeds, then execute the revised motion.</p></article><article><span class="case-letter">C</span><h3>Refine contact</h3><p>Use fresh observations to revise an unsuccessful grasp and lift the soup can.</p></article></div></div>
+</div></section>
+<section class="section" id="results"><div class="container"><p class="eyebrow">MAIN RESULTS</p><h2>LIBERO-Pro</h2><p class="section-intro">WAA reaches <strong>75.6%</strong> average success with a frozen skill library evolved only from LIBERO-90.</p>
+<div class="table-scroll" role="region" aria-label="LIBERO-Pro success rates, horizontally scrollable" tabindex="0"><table><caption>Success rates (%) on LIBERO-Pro. Bold indicates the best result in each column.</caption><thead><tr><th rowspan="2" scope="col">Method</th><th colspan="2" scope="colgroup">Object</th><th colspan="2" scope="colgroup">Goal</th><th colspan="2" scope="colgroup">Spatial</th><th rowspan="2" scope="col">Avg.</th></tr><tr><th scope="col">Pos.</th><th scope="col">Task</th><th scope="col">Pos.</th><th scope="col">Task</th><th scope="col">Pos.</th><th scope="col">Task</th></tr></thead><tbody><tr><th scope="row">OpenVLA</th><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><th scope="row">π<sub>0.5</sub></th><td>17.0</td><td>1.0</td><td>38.0</td><td>0.0</td><td>20.0</td><td>1.0</td><td>12.8</td></tr><tr><th scope="row">CaP-Agent0 (CaP-X)</th><td>22.0</td><td>18.0</td><td>26.0</td><td>17.0</td><td>12.0</td><td>14.0</td><td>18.2</td></tr><tr><th scope="row">CaP-Agent0 (Playful)</th><td>27.0</td><td>31.0</td><td>29.0</td><td>16.0</td><td>13.0</td><td>23.0</td><td>23.2</td></tr><tr><th scope="row">RATs (Playful)</th><td>61.0</td><td>63.0</td><td>43.0</td><td>36.0</td><td>29.0</td><td>31.0</td><td>43.8</td></tr><tr><th scope="row">ASPIRE</th><td><strong>98.0</strong></td><td><strong>95.0</strong></td><td><strong>81.0</strong></td><td>45.0</td><td>51.0</td><td>60.0</td><td>72.0</td></tr><tr><th scope="row">Show-Harness</th><td>13.3</td><td>16.7</td><td>0.0</td><td>10.0</td><td>0.0</td><td>0.0</td><td>6.7</td></tr><tr class="group-start"><th scope="row">WAA (zero-shot)</th><td>53.3</td><td>46.7</td><td>30.0</td><td>23.3</td><td>13.3</td><td>6.7</td><td>28.9</td></tr><tr><th scope="row">WAA + seed skills</th><td>83.3</td><td>70.0</td><td>26.7</td><td>40.0</td><td>16.7</td><td>23.3</td><td>43.3</td></tr><tr class="ours"><th scope="row">WAA (evolved skills)</th><td>95.0</td><td>93.3</td><td>63.3</td><td><strong>48.3</strong></td><td><strong>80.0</strong></td><td><strong>73.3</strong></td><td><strong>75.6</strong></td></tr><tr class="group-start"><th scope="row">WAA (evolved skills &amp; RGB-D)</th><td>88.3</td><td>91.7</td><td>56.7</td><td>45.0</td><td>76.7</td><td>68.3</td><td>71.1</td></tr><tr><th scope="row">WAA (evolved skills &amp; VGGT)</th><td>90.0</td><td>88.3</td><td>53.3</td><td>45.0</td><td>65.0</td><td>71.7</td><td>68.9</td></tr></tbody></table></div>
+<p class="table-note">Pos.: initial-position swaps. Task: task perturbations. WAA uses Gemini 3.7 Flash; each WAA setting is evaluated for 60 episodes per split. The first three WAA rows use scene point clouds; the final two use RGB-D and VGGT reconstruction.</p>
+</div></section>
+<section class="section code-section" id="code"><div class="container reading-width has-text-centered"><p class="eyebrow">CODE RELEASE</p><h2>Coming soon</h2><p>We are actively organizing and documenting the code for release as soon as possible.</p></div></section>
+<section class="section citation-section" id="citation"><div class="container"><div class="section-heading"><h2>BibTeX</h2><button class="copy-button" id="copy-bibtex" type="button">Copy citation</button></div><pre><code id="bibtex">@misc{zhang2026worldactionagent,
+  title = {World Action Agent: Harnessing VLMs for Robot Manipulation via World Action Rehearsal},
+  author = {Yehang Zhang and Haojian Huang and Yifan Chang and Jianchong Su and Bohan Zhou and Yingjie Xu and Wosong Chen and Tianhao Zhou and Chenxu Wang and Tianyi Zhang and Yangkai Wei and Wenqian Li and Shiyuan Deng and Yinchuan Li and Ying-Cong Chen and Zexi Li},
+  year = {2026},
+  eprint = {2609.29964},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/2609.29964}
+}</code></pre><p id="copy-status" role="status" aria-live="polite"></p></div></section>
+</main><footer class="footer"><div class="container"><p>World Action Agent · 2026</p><p>Website adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a> and <a href="https://nerfies.github.io/" target="_blank" rel="noopener">Nerfies</a>.<br>Website template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.</p></div></footer>
+</body></html>
