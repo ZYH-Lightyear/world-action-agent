@@ -1,5 +1,5 @@
 {
-  "description": "Six visually reviewed successful demonstrations. v332 Object/Spatial 200-episode and corresponding Goal batches; stove from separate v312 one-shot skill validation. Qualitative selection only, not a new evaluation.",
+  "description": "Six visually reviewed successes from v332 Object/Spatial and Goal batches, v312 Goal evaluation, and separate v312 one-shot stove validation. Qualitative selection only, not a new evaluation.",
   "cases": [
     {
       "id": "drawer_cheese",
@@ -50,19 +50,19 @@
       "processing": "Full original H.264 stream retained, with MP4 faststart. No cuts or speed changes. Poster extracted from final recorded frame."
     },
     {
-      "id": "bowl_on_cabinet",
-      "title": "Place the bowl on the cabinet",
-      "source": "vaw/out/libero_pro_task_eval/openrouter_gemini37_v18_v332_goal_remaining28_s0-2-3-4_t1_turn50_p5_gpu4_20260922_012541/tasks/libero_goal_swap/task04_s0_t1/attempt_01/video_agentview.mp4",
-      "experiment": "openrouter_gemini37_v18_v332_goal_remaining28_s0-2-3-4_t1_turn50_p5_gpu4_20260922_012541",
-      "episode": "libero_goal_swap/task04_s0_t1",
-      "task_instruction": "Put the bowl on the top of the drawer",
-      "suite": "libero_goal_swap",
+      "id": "wine_in_bowl",
+      "title": "Place the wine bottle in the bowl",
+      "source": "vaw/out/libero_pro_task_eval/openrouter_gemini37_v18_v312_egl_bowlstart_proxy8077_goal20_s1_t1_turn50_p5_gpu4_20260920_172243/tasks/libero_goal_task/task02_s1_t1/attempt_01/video_agentview.mp4",
+      "experiment": "openrouter_gemini37_v18_v312_egl_bowlstart_proxy8077_goal20_s1_t1_turn50_p5_gpu4_20260920_172243",
+      "episode": "libero_goal_task/task02_s1_t1",
+      "task_instruction": "put the wine bottle in the bowl",
+      "suite": "libero_goal_task",
       "env_success": true,
-      "seed": 0,
+      "seed": 1,
       "trial": 1,
-      "turns": 14,
-      "duration_seconds": 4.333333,
-      "selection_review": "Clear grasp and transfer; final frame shows the bowl on the cabinet and gripper retracted.",
+      "turns": 17,
+      "duration_seconds": 4.066667,
+      "selection_review": "Compared both v312 successful wine-in-bowl candidates across the motion sequence and final frames. Task 02 selected for an upright bottle in the bowl and clearly open, retracted gripper at completion.",
       "processing": "Full original H.264 stream retained, with MP4 faststart. No cuts or speed changes. Poster extracted from final recorded frame."
     },
     {

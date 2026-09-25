@@ -63,9 +63,9 @@ The website is adapted from the [Academic Project Page Template](https://github.
 
 ## Demonstration videos
 
-Six curated rollouts prioritize Goal tasks: open a drawer and put cream cheese inside; turn on the stove; place cheese on a rack; place a bowl on a cabinet; place a bowl on a plate; and place butter in a basket.
+Six curated rollouts prioritize Goal tasks: open a drawer and put cream cheese inside; turn on the stove; place cheese on a rack; place a wine bottle in a bowl; place a bowl on a plate; and place butter in a basket.
 
-Object and Spatial clips come from the v332 200-episode batch. The drawer and other Goal placements come from matching v332 Goal batches. Stove activation comes from the separate v312 one-shot skill validation batch. It is not attributed to the v332 200-episode evaluation.
+Object and Spatial clips come from the v332 200-episode batch. The drawer and cheese-on-rack Goal placements come from matching v332 Goal batches. Wine-in-bowl comes from the v312 Goal evaluation (task 02, seed 1). Stove activation comes from the separate v312 one-shot skill validation batch. It is not attributed to the v332 200-episode evaluation.
 
 Selection considered the environment success receipt, motion sequences sampled throughout each recording, final release/support, and visible disturbance of surrounding objects. The previous v061 showcase clips have been removed. Each clip retains its entire original H.264 stream, with no cuts or speed changes. Posters show the final recorded frame. Native controls support mobile inline and fullscreen playback; media loads on demand without autoplay.
 
