@@ -63,6 +63,10 @@ The website is adapted from the [Academic Project Page Template](https://github.
 
 ## Demonstration videos
 
-Four successful LIBERO-Pro rollouts are embedded with native video controls, mobile inline playback, and first-frame posters. Videos load on demand (`preload="none"`); no autoplay is used. The original H.264 streams are preserved with MP4 faststart.
+Six curated rollouts prioritize Goal tasks: open a drawer and put cream cheese inside; turn on the stove; place cheese on a rack; place a bowl on a cabinet; place a bowl on a plate; and place butter in a basket.
 
-`video-sources.json` records task instructions, benchmark splits, environment success labels, and source/output hashes. Sources are from `../showcase_minimal/traces/`, the frozen v061 / v18 showcase batch. These are qualitative examples, not a new evaluation.
+Object and Spatial clips come from the v332 200-episode batch. The drawer and other Goal placements come from matching v332 Goal batches. Stove activation comes from the separate v312 one-shot skill validation batch. It is not attributed to the v332 200-episode evaluation.
+
+Selection considered the environment success receipt, motion sequences sampled throughout each recording, final release/support, and visible disturbance of surrounding objects. The previous v061 showcase clips have been removed. Each clip retains its entire original H.264 stream, with no cuts or speed changes. Posters show the final recorded frame. Native controls support mobile inline and fullscreen playback; media loads on demand without autoplay.
+
+`video-sources.json` records source paths, experiment versions, task instructions, seeds, success receipts, and selection notes. These videos are qualitative examples and do not change the paper's main results table.
