@@ -60,3 +60,9 @@ Open http://localhost:8080 on the same computer, or forward port 8080 when worki
 The 16 authors, affiliations, contribution marks, figures, and LIBERO-Pro main results table follow the paper. In the original workspace, the manuscript is at `../../arxiv_waa/`. Only the main experimental table is displayed; the code section intentionally remains Coming soon.
 
 The website is adapted from the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template), which builds on [Nerfies](https://nerfies.github.io/). The template is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). This attribution concerns the website template; it does not assign a new license to the paper or research assets.
+
+## Demonstration videos
+
+Four successful LIBERO-Pro rollouts are embedded with native video controls, mobile inline playback, and first-frame posters. Videos load on demand (`preload="none"`); no autoplay is used. The original H.264 streams are preserved with MP4 faststart.
+
+`video-sources.json` records task instructions, benchmark splits, environment success labels, and source/output hashes. Sources are from `../showcase_minimal/traces/`, the frozen v061 / v18 showcase batch. These are qualitative examples, not a new evaluation.

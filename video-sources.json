@@ -1,0 +1,61 @@
+{
+  "description": "Curated success demonstrations; not a new evaluation or an estimate of success rate. Recordings come from the frozen v061 / v18 showcase batch.",
+  "cases": [
+    {
+      "id": "object_alphabet_soup",
+      "title": "Alphabet soup into the basket",
+      "source": "vaw/showcase_minimal/traces/object_alphabet_soup/video_agentview.mp4",
+      "task_instruction": "Pick the alphabet soup and place it in the basket",
+      "suite": "libero_object_task",
+      "env_success": true,
+      "seed": 0,
+      "trial": 1,
+      "source_sha256": "467d6208f72da46efb49453f9b1e6583b550eeebe8ae6d575644d7ebce0336c9",
+      "published_sha256": "63d1f746b99f8ccffee461875ca67bbe53141024193f24582dad49fb9981fa8e",
+      "duration_seconds": 7.4,
+      "processing": "Original H.264 video stream retained; MP4 metadata moved to the front for streaming. Poster extracted from the first frame."
+    },
+    {
+      "id": "spatial_bowl_on_plate",
+      "title": "Bowl onto the plate",
+      "source": "vaw/showcase_minimal/traces/spatial_bowl_on_plate/video_agentview.mp4",
+      "task_instruction": "Pick the akita black bowl next to the cookie box and place it on the plate",
+      "suite": "libero_spatial_task",
+      "env_success": true,
+      "seed": 0,
+      "trial": 1,
+      "source_sha256": "99b0893cdeb9673a89f32820628431ac6185539f31274b333efff838dcbeef97",
+      "published_sha256": "0101e8adc9691d04b6dbc9978baa17d465af264e699787ddc30c0a74c02b6910",
+      "duration_seconds": 10.966667,
+      "processing": "Original H.264 video stream retained; MP4 metadata moved to the front for streaming. Poster extracted from the first frame."
+    },
+    {
+      "id": "object_cream_cheese",
+      "title": "Cream cheese into the basket",
+      "source": "vaw/showcase_minimal/traces/object_cream_cheese/video_agentview.mp4",
+      "task_instruction": "Pick the cream cheese and place it in the basket",
+      "suite": "libero_object_task",
+      "env_success": true,
+      "seed": 0,
+      "trial": 1,
+      "source_sha256": "88c6cd37ca7f6a2a17da390dc091200f8e6032180cb5b354511def00fe4a6e17",
+      "published_sha256": "e12adb30e439a56484af95b453a916e7f189bbe3bc5bb2dd0be52e03595bc8eb",
+      "duration_seconds": 6.833333,
+      "processing": "Original H.264 video stream retained; MP4 metadata moved to the front for streaming. Poster extracted from the first frame."
+    },
+    {
+      "id": "swap_orange_juice",
+      "title": "Orange juice after a position swap",
+      "source": "vaw/showcase_minimal/traces/swap_orange_juice/video_agentview.mp4",
+      "task_instruction": "Pick the orange juice and place it in the basket",
+      "suite": "libero_object_swap",
+      "env_success": true,
+      "seed": 0,
+      "trial": 1,
+      "source_sha256": "81a83880c32297fcb08188f95841b60228797f2ba1c549116f82dba3628497de",
+      "published_sha256": "7fde38147e4c0207b258ddb652d7ee570e461cd4bcdb9a8cc91c059b721dd0a4",
+      "duration_seconds": 8.866667,
+      "processing": "Original H.264 video stream retained; MP4 metadata moved to the front for streaming. Poster extracted from the first frame."
+    }
+  ]
+}
